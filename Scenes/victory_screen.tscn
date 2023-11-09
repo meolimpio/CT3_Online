@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://bet4mubcqayg5"]
+
+[ext_resource type="FontFile" uid="uid://5c1tcq6y4w6k" path="res://Fonts/Honey and Raspberries.ttf" id="1_m4dci"]
+[ext_resource type="FontFile" uid="uid://c1s4eosxinrwv" path="res://Fonts/Happy Lucky Free.ttf" id="2_ut5rm"]
+
+[node name="VictoryScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 646.0
+color = Color(0.494118, 0.313726, 0.627451, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 149.0
+offset_right = 1055.0
+offset_bottom = 268.0
+theme_override_colors/font_color = Color(0.760784, 0.643137, 0.862745, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_m4dci")
+theme_override_font_sizes/font_size = 100
+text = "Triunfo Tumultuoso"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 403.0
+offset_right = 711.0
+offset_bottom = 466.0
+theme_override_fonts/font = ExtResource("2_ut5rm")
+theme_override_font_sizes/font_size = 50
+text = "Voltar ao Menu"
