@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://buxulwlmrmrrg"]
+
+[ext_resource type="ArrayMesh" uid="uid://do8pgunupym30" path="res://Sprites/maids.vox" id="1_ncdmk"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aj0wc"]
+radius = 0.776851
+height = 2.16257
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.588031, 0, 0)
+shape = SubResource("CapsuleShape3D_aj0wc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.680365, -0.909205, -0.115476)
+mesh = ExtResource("1_ncdmk")

@@ -10,14 +10,13 @@ config_version=5
 
 [application]
 
-config/name="PlatformGame"
-run/main_scene="res://Scenes/menu_screen.tscn"
+config/name="PlatformGameCT3"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
-project/assembly_name="PlatformGame"
+project/assembly_name="PlatformGameCT3"
 
 [editor_plugins]
 
