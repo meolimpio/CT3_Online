@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvdqy34rmmiyr"]
+[gd_scene load_steps=5 format=3 uid="uid://dvdqy34rmmiyr"]
 
 [ext_resource type="FontFile" uid="uid://5c1tcq6y4w6k" path="res://Fonts/Honey and Raspberries.ttf" id="1_plupa"]
 [ext_resource type="Texture2D" uid="uid://bkdpjx3ktb1tm" path="res://Sprites/Capyba.png" id="2_rngar"]
 [ext_resource type="FontFile" uid="uid://c1s4eosxinrwv" path="res://Fonts/Happy Lucky Free.ttf" id="3_cg1jv"]
+[ext_resource type="Texture2D" uid="uid://bxwq0kyl06lr1" path="res://Sprites/capybara.png" id="4_dwne6"]
 
 [node name="MenuScreen" type="Control"]
 layout_mode = 3
@@ -16,19 +17,15 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 646.0
-color = Color(0.227451, 0.12549, 0.294118, 1)
-
-[node name="Capyba" type="Sprite2D" parent="ColorRect"]
-position = Vector2(159, 494)
-texture = ExtResource("2_rngar")
+color = Color(0.870588, 0.890196, 0.521569, 1)
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 180.0
-offset_top = 106.0
-offset_right = 983.0
-offset_bottom = 272.0
-theme_override_colors/font_color = Color(0.921569, 0.878431, 0.956863, 1)
+offset_left = 175.0
+offset_top = 170.0
+offset_right = 978.0
+offset_bottom = 336.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_plupa")
 theme_override_font_sizes/font_size = 140
@@ -38,11 +35,20 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 467.0
-offset_top = 434.0
-offset_right = 691.0
-offset_bottom = 507.0
+offset_left = 486.0
+offset_top = 382.0
+offset_right = 710.0
+offset_bottom = 455.0
 theme_override_colors/font_color = Color(0.921569, 0.878431, 0.956863, 1)
 theme_override_fonts/font = ExtResource("3_cg1jv")
 theme_override_font_sizes/font_size = 50
 text = "LETS BORA"
+
+[node name="Capybara" type="Sprite2D" parent="."]
+position = Vector2(1023, 489)
+scale = Vector2(0.564665, 0.553726)
+texture = ExtResource("4_dwne6")
+
+[node name="Capyba" type="Sprite2D" parent="."]
+position = Vector2(165, 492)
+texture = ExtResource("2_rngar")

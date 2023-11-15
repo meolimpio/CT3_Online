@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://4gfr351sgja0"]
+[gd_scene load_steps=4 format=3 uid="uid://4gfr351sgja0"]
 
 [ext_resource type="FontFile" uid="uid://5c1tcq6y4w6k" path="res://Fonts/Honey and Raspberries.ttf" id="1_shcd7"]
 [ext_resource type="FontFile" uid="uid://c1s4eosxinrwv" path="res://Fonts/Happy Lucky Free.ttf" id="2_epj4o"]
+[ext_resource type="Texture2D" uid="uid://ct7m1upwrjp63" path="res://Sprites/capy.png" id="3_20jox"]
 
 [node name="GameOverScreen" type="Control"]
 layout_mode = 3
@@ -15,14 +16,14 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-color = Color(0.921569, 0.878431, 0.956863, 1)
+color = Color(0.882353, 0.937255, 0.537255, 1)
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 235.0
-offset_top = 175.0
-offset_right = 965.0
-offset_bottom = 317.0
+offset_left = 55.0
+offset_top = 139.0
+offset_right = 785.0
+offset_bottom = 281.0
 theme_override_colors/font_color = Color(0.341176, 0.223529, 0.415686, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_shcd7")
@@ -31,20 +32,25 @@ text = "Tango Trágico"
 
 [node name="Button_restart" type="Button" parent="."]
 layout_mode = 0
-offset_left = 417.0
-offset_top = 393.0
-offset_right = 754.0
-offset_bottom = 449.0
+offset_left = 216.0
+offset_top = 350.0
+offset_right = 553.0
+offset_bottom = 406.0
 theme_override_fonts/font = ExtResource("2_epj4o")
 theme_override_font_sizes/font_size = 50
 text = "Vamo de novo?"
 
 [node name="Button_menu" type="Button" parent="."]
 layout_mode = 0
-offset_left = 416.0
-offset_top = 484.0
-offset_right = 754.0
-offset_bottom = 540.0
+offset_left = 215.0
+offset_top = 433.0
+offset_right = 553.0
+offset_bottom = 489.0
 theme_override_fonts/font = ExtResource("2_epj4o")
 theme_override_font_sizes/font_size = 50
 text = "Vamo pro menu"
+
+[node name="Capy" type="Sprite2D" parent="."]
+position = Vector2(888, 376)
+scale = Vector2(1.52222, 1.70278)
+texture = ExtResource("3_20jox")
