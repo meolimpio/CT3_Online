@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://5c1tcq6y4w6k"
-path="res://.godot/imported/Honey and Raspberries.ttf-c555d94594c803a0164ce641b88980bf.fontdata"
+path="res://.godot/imported/Honey and Raspberries.ttf-abe176e9dac3da5849e26acce166534b.fontdata"
 
 [deps]
 
-source_file="res://Fonts/Honey and Raspberries.ttf"
-dest_files=["res://.godot/imported/Honey and Raspberries.ttf-c555d94594c803a0164ce641b88980bf.fontdata"]
+source_file="res://Assets/Fonts/Honey and Raspberries.ttf"
+dest_files=["res://.godot/imported/Honey and Raspberries.ttf-abe176e9dac3da5849e26acce166534b.fontdata"]
 
 [params]
 

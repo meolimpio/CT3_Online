@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c1s4eosxinrwv"
-path="res://.godot/imported/Happy Lucky Free.ttf-afe1b6a02b8ffdec1bc8dd7d54d9a1f2.fontdata"
+path="res://.godot/imported/Happy Lucky Free.ttf-6e8a327506e6099a55f3cf42cb31f053.fontdata"
 
 [deps]
 
-source_file="res://Fonts/Happy Lucky Free.ttf"
-dest_files=["res://.godot/imported/Happy Lucky Free.ttf-afe1b6a02b8ffdec1bc8dd7d54d9a1f2.fontdata"]
+source_file="res://Assets/Fonts/Happy Lucky Free.ttf"
+dest_files=["res://.godot/imported/Happy Lucky Free.ttf-6e8a327506e6099a55f3cf42cb31f053.fontdata"]
 
 [params]
 

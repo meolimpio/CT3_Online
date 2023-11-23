@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://4gfr351sgja0"]
 
-[ext_resource type="FontFile" uid="uid://5c1tcq6y4w6k" path="res://Fonts/Honey and Raspberries.ttf" id="1_shcd7"]
-[ext_resource type="FontFile" uid="uid://c1s4eosxinrwv" path="res://Fonts/Happy Lucky Free.ttf" id="2_epj4o"]
+[ext_resource type="FontFile" uid="uid://5c1tcq6y4w6k" path="res://Assets/Fonts/Honey and Raspberries.ttf" id="1_shcd7"]
+[ext_resource type="FontFile" uid="uid://c1s4eosxinrwv" path="res://Assets/Fonts/Happy Lucky Free.ttf" id="2_epj4o"]
 [ext_resource type="Texture2D" uid="uid://ct7m1upwrjp63" path="res://Sprites/capy.png" id="3_20jox"]
 
 [node name="GameOverScreen" type="Control"]

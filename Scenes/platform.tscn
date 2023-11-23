@@ -1,8 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://di8dkfxsf7k7a"]
+[gd_scene load_steps=5 format=3 uid="uid://di8dkfxsf7k7a"]
+
+[ext_resource type="Texture2D" uid="uid://dg6pin3k8igwb" path="res://Assets/Textures/texture_grass.jpg" id="1_nseir"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c5l1u"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cmgao"]
+albedo_texture = ExtResource("1_nseir")
+
 [sub_resource type="BoxMesh" id="BoxMesh_kwqjm"]
+material = SubResource("StandardMaterial3D_cmgao")
 
 [node name="Platform" type="StaticBody3D"]
 
