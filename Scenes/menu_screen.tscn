@@ -2,9 +2,9 @@
 
 [ext_resource type="FontFile" uid="uid://5c1tcq6y4w6k" path="res://Assets/Fonts/Honey and Raspberries.ttf" id="1_0j7th"]
 [ext_resource type="FontFile" uid="uid://c1s4eosxinrwv" path="res://Assets/Fonts/Happy Lucky Free.ttf" id="2_7u7yd"]
-[ext_resource type="Texture2D" uid="uid://bkdpjx3ktb1tm" path="res://Sprites/Capyba.png" id="2_rngar"]
 [ext_resource type="Script" path="res://Scripts/StartButton.gd" id="3_uq2f8"]
-[ext_resource type="Texture2D" uid="uid://bxwq0kyl06lr1" path="res://Sprites/capybara.png" id="4_dwne6"]
+[ext_resource type="Texture2D" uid="uid://bxwq0kyl06lr1" path="res://Assets/Sprites/capybara.png" id="4_ssfu6"]
+[ext_resource type="Texture2D" uid="uid://bkdpjx3ktb1tm" path="res://Assets/Sprites/Capyba.png" id="5_mthwa"]
 
 [node name="MenuScreen" type="Control"]
 layout_mode = 3
@@ -50,10 +50,10 @@ script = ExtResource("3_uq2f8")
 [node name="Capybara" type="Sprite2D" parent="."]
 position = Vector2(1023, 489)
 scale = Vector2(0.564665, 0.553726)
-texture = ExtResource("4_dwne6")
+texture = ExtResource("4_ssfu6")
 
 [node name="Capyba" type="Sprite2D" parent="."]
 position = Vector2(165, 492)
-texture = ExtResource("2_rngar")
+texture = ExtResource("5_mthwa")
 
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]

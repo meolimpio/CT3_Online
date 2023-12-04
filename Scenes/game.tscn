@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://5vjlfr5g8kmd"]
+[gd_scene load_steps=11 format=3 uid="uid://5vjlfr5g8kmd"]
 
 [ext_resource type="PackedScene" uid="uid://di8dkfxsf7k7a" path="res://Scenes/platform.tscn" id="1_bkyjh"]
 [ext_resource type="PackedScene" uid="uid://buxulwlmrmrrg" path="res://Scenes/player.tscn" id="2_moyh0"]
@@ -6,6 +6,10 @@
 [ext_resource type="ArrayMesh" uid="uid://djuy6jjr6lqkm" path="res://Assets/Decorations/canopy_3.vox" id="4_05qo7"]
 [ext_resource type="ArrayMesh" uid="uid://yhgylnsr3kol" path="res://Assets/Decorations/trunk_4.vox" id="5_8cruc"]
 [ext_resource type="ArrayMesh" uid="uid://b2xvpe7qjhnek" path="res://Assets/Decorations/trunk_6.vox" id="6_wiu2c"]
+[ext_resource type="PackedScene" uid="uid://dd5gcbg0rvxot" path="res://Scenes/coin.tscn" id="7_k0r3w"]
+[ext_resource type="Texture2D" uid="uid://cw3lph78pm8as" path="res://Assets/Coin/Coin.png" id="8_lecr5"]
+[ext_resource type="FontFile" uid="uid://5c1tcq6y4w6k" path="res://Assets/Fonts/Honey and Raspberries.ttf" id="8_n8rqq"]
+[ext_resource type="Script" path="res://Scripts/Counter.gd" id="10_xe0d7"]
 
 [node name="Game" type="Node3D"]
 
@@ -24,34 +28,103 @@ light_color = Color(1, 0.992157, 0.643137, 1)
 light_energy = 1.5
 shadow_enabled = true
 
-[node name="Grass1" type="MeshInstance3D" parent="."]
+[node name="Decorations" type="Node3D" parent="."]
+
+[node name="Grass1" type="MeshInstance3D" parent="Decorations"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.08631, 0.347027, 9.64292)
 mesh = ExtResource("3_r20eq")
+skeleton = NodePath("../..")
 
-[node name="Canopy3" type="MeshInstance3D" parent="."]
+[node name="Canopy3" type="MeshInstance3D" parent="Decorations"]
 transform = Transform3D(0.267, 0, 0, 0, 0.2, 0, 0, 0, 0.267, 10.5406, 0.200402, 9.0943)
 mesh = ExtResource("4_05qo7")
+skeleton = NodePath("../..")
 
-[node name="Grass2" type="MeshInstance3D" parent="."]
+[node name="Grass2" type="MeshInstance3D" parent="Decorations"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.26258, 0.392812, 8.44822)
 mesh = ExtResource("3_r20eq")
+skeleton = NodePath("../..")
 
-[node name="Grass3" type="MeshInstance3D" parent="."]
+[node name="Grass3" type="MeshInstance3D" parent="Decorations"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.69096, 0.392812, 9.74525)
 mesh = ExtResource("3_r20eq")
+skeleton = NodePath("../..")
 
-[node name="Grass4" type="MeshInstance3D" parent="."]
+[node name="Grass4" type="MeshInstance3D" parent="Decorations"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7963, 0.392813, 9.45379)
 mesh = ExtResource("3_r20eq")
+skeleton = NodePath("../..")
 
-[node name="Grass5" type="MeshInstance3D" parent="."]
+[node name="Grass5" type="MeshInstance3D" parent="Decorations"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7332, 0.392812, 7.92317)
 mesh = ExtResource("3_r20eq")
+skeleton = NodePath("../..")
 
-[node name="Trunk4" type="MeshInstance3D" parent="."]
+[node name="Trunk4" type="MeshInstance3D" parent="Decorations"]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 8.37121, 0.525458, 8.56989)
 mesh = ExtResource("5_8cruc")
+skeleton = NodePath("../..")
 
-[node name="Trunk6" type="MeshInstance3D" parent="."]
+[node name="Trunk6" type="MeshInstance3D" parent="Decorations"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.79972, 0.392812, 8.54719)
 mesh = ExtResource("6_wiu2c")
+skeleton = NodePath("../..")
+
+[node name="Coins" type="Node3D" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("7_k0r3w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.21008, 1, 3.99714)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("7_k0r3w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.24782, 4)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("7_k0r3w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64553, 1.24782, 4)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("7_k0r3w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09601, 1.24782, 4)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("7_k0r3w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.74441, 1.24782, 4)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("7_k0r3w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.26776, 1.24782, 4)
+
+[node name="Score" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 107.0
+offset_bottom = 40.0
+
+[node name="Icon" type="Sprite2D" parent="Score"]
+position = Vector2(43, 66)
+scale = Vector2(0.100781, 0.0953125)
+texture = ExtResource("8_lecr5")
+
+[node name="Counter" type="Label" parent="Score"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 48.0
+offset_right = 123.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_n8rqq")
+theme_override_font_sizes/font_size = 30
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("10_xe0d7")
+
+[connection signal="body_entered" from="Coins/Coin" to="Coins/Coin" method="_on_body_entered"]
+[connection signal="coinCollected" from="Coins/Coin" to="Score/Counter" method="_on_coin_coin_collected"]
+[connection signal="body_entered" from="Coins/Coin2" to="Coins/Coin2" method="_on_body_entered"]
+[connection signal="coinCollected" from="Coins/Coin2" to="Score/Counter" method="_on_coin_coin_collected"]
+[connection signal="body_entered" from="Coins/Coin3" to="Coins/Coin3" method="_on_body_entered"]
+[connection signal="coinCollected" from="Coins/Coin3" to="Score/Counter" method="_on_coin_coin_collected"]
+[connection signal="body_entered" from="Coins/Coin4" to="Coins/Coin4" method="_on_body_entered"]
+[connection signal="coinCollected" from="Coins/Coin4" to="Score/Counter" method="_on_coin_coin_collected"]
+[connection signal="body_entered" from="Coins/Coin5" to="Coins/Coin5" method="_on_body_entered"]
+[connection signal="coinCollected" from="Coins/Coin5" to="Score/Counter" method="_on_coin_coin_collected"]
+[connection signal="body_entered" from="Coins/Coin6" to="Coins/Coin6" method="_on_body_entered"]
+[connection signal="coinCollected" from="Coins/Coin6" to="Score/Counter" method="_on_coin_coin_collected"]

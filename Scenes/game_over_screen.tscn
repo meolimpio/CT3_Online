@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://5c1tcq6y4w6k" path="res://Assets/Fonts/Honey and Raspberries.ttf" id="1_shcd7"]
 [ext_resource type="FontFile" uid="uid://c1s4eosxinrwv" path="res://Assets/Fonts/Happy Lucky Free.ttf" id="2_epj4o"]
-[ext_resource type="Texture2D" uid="uid://ct7m1upwrjp63" path="res://Sprites/capy.png" id="3_20jox"]
+[ext_resource type="Texture2D" uid="uid://ct7m1upwrjp63" path="res://Assets/Sprites/capy.png" id="3_20jox"]
 [ext_resource type="Script" path="res://Scripts/Button_restart.gd" id="3_a1ujg"]
 [ext_resource type="Script" path="res://Scripts/Button_menu.gd" id="4_rjcih"]
 
@@ -34,10 +34,10 @@ text = "Tango Trágico"
 
 [node name="Button_restart" type="Button" parent="."]
 layout_mode = 0
-offset_left = 216.0
-offset_top = 350.0
-offset_right = 553.0
-offset_bottom = 406.0
+offset_left = 178.0
+offset_top = 348.0
+offset_right = 515.0
+offset_bottom = 404.0
 theme_override_fonts/font = ExtResource("2_epj4o")
 theme_override_font_sizes/font_size = 50
 text = "Vamo de novo?"
@@ -45,10 +45,10 @@ script = ExtResource("3_a1ujg")
 
 [node name="Button_menu" type="Button" parent="."]
 layout_mode = 0
-offset_left = 215.0
-offset_top = 433.0
-offset_right = 553.0
-offset_bottom = 489.0
+offset_left = 177.0
+offset_top = 431.0
+offset_right = 515.0
+offset_bottom = 487.0
 theme_override_fonts/font = ExtResource("2_epj4o")
 theme_override_font_sizes/font_size = 50
 text = "Vamo pro menu"

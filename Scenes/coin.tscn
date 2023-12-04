@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd5gcbg0rvxot"]
+
+[ext_resource type="ArrayMesh" uid="uid://btm8dxxuw1gje" path="res://Assets/Coin/Coin.vox" id="1_b8jew"]
+[ext_resource type="Script" path="res://Scripts/coin.gd" id="1_dvejj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xusuf"]
+
+[node name="Coin" type="Area3D"]
+script = ExtResource("1_dvejj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_xusuf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.505124, 0)
+mesh = ExtResource("1_b8jew")
+skeleton = NodePath("../..")
