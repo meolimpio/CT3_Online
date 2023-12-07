@@ -3,7 +3,7 @@ extends CharacterBody3D
 @export_category("Settings Player")
 @export var speed = 5.0
 @export var jump_force = 4.5
-@export var lives = 3
+@export var mouse_sense = 0.05
 
 @onready var camera = $Camera3D
 
@@ -30,7 +30,13 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, speed)
 
 	move_and_slide()
-	
+
 func respawn():
 	if(Input.is_action_just_pressed("respawn")):
 		get_tree().reload_current_scene()
+
+func _input(event):
+	if event is InputEventMouseMotion:
+		rotate_y(deg_to_rad(-event.relative.x * mouse_sense))
+		camera.rotate_x(deg_to_rad(-event.relative.y * mouse_sense))
+		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-89), deg_to_rad(89))
